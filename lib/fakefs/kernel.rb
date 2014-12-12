@@ -19,6 +19,7 @@ module FakeFS
           ::FakeFS::Kernel.captives[:original][name].call(*args, &block)
         end)
       end
+      String.instance_eval { private :open }
     end
 
     private
